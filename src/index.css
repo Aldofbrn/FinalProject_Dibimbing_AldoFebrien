@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body,
+html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  height: 100%;
+}
+
+.slick-dots {
+  bottom: -10px !important;
+}
+@layer components {
+  .card {
+    @apply bg-white text-gray-700 w-72 min-h-[1rem] shadow-lg rounded-md overflow-hidden;
+  }
+  .badge {
+    @apply px-3 py-1 rounded-full text-xs bg-tertiary/30;
+    color: inherit; /* Ensures inherited text color is used */
+    font-weight: inherit; /* Avoids overriding font weight */
+  }
+}
+
+.slick-list {
+  margin: 0 -10px;
+}
+
+.custom-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #007bff; /* Blue color */
+  color: #fff; /* White text */
+  border-radius: 50%; /* Circle shape */
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.custom-arrow:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
